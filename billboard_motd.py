@@ -7,7 +7,8 @@
 
 #!/usr/bin/env python3
 
-import requests
+import urllib.request
+from urllib.error import URLError, HTTPError
 from bs4 import BeautifulSoup
 
 # CSS Selectors for Billboard Chart Items
@@ -26,12 +27,16 @@ the_hits: list[str] = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
 
 def fetch_page() -> BeautifulSoup:
     """Fetch the HTML content of billboard.com."""
+    url = "https://www.billboard.com/charts/hot-100/"
     try:
-        response = requests.get("https://www.billboard.com/charts/hot-100/")
-        response.raise_for_status()
-        return BeautifulSoup(response.text, "html.parser")
-    except requests.RequestException as e:
-        print(f"Error fetching the page: {e}")
+        with urllib.request.urlopen(url) as response:
+            html_content = response.read()
+            return BeautifulSoup(html_content, "html.parser")
+    except HTTPError as e:
+        print(f"HTTP Error: {e.code} - {e.reason}")
+        return None
+    except URLError as e:
+        print(f"URL Error: {e.reason}")
         return None
 
 
