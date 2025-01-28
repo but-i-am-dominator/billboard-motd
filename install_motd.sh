@@ -37,13 +37,3 @@ echo "Updating MOTD..."
 run-parts /etc/update-motd.d/ > /var/run/motd
 
 echo "Installation complete! Log in to your terminal to see the MOTD."
-
-
-'''
-Steps to Use the Install Script
-Save the install script as install_motd.sh.
-Place your Python script (billboard_motd.py) in the same directory as the install script.
-Run the following commands to install:
-chmod +x install_motd.sh
-sudo ./install_motd.sh
-'''
