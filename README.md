@@ -10,7 +10,6 @@ A Python-based script that dynamically scrapes the top 10 songs from the Billboa
 ## Prerequisites ⚙️
 1. **Python 3.6 or later** 🐍
 2. **Required Python Libraries**:
-   - `requests` 📡
    - `beautifulsoup4` 🍲
 3. A Linux-based system that supports dynamic MOTD (`/etc/update-motd.d`). 🐧
 
@@ -73,7 +72,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 
 ## Acknowledgments 🙌
 - Billboard Hot 100: [billboard.com](https://www.billboard.com) 🎵
-- Python Libraries: `requests`, `beautifulsoup4` 🐍🍲
+- Python Libraries: `beautifulsoup4` 🐍🍲
 
 ---
 
