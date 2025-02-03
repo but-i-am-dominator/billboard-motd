@@ -2,6 +2,8 @@
 
 A Python-based script that dynamically scrapes the top 10 songs from the Billboard Hot 100 chart and sets it as the Message of the Day (MOTD) on your Linux system. 🎶✨ This is a fun and creative way to greet users logging into their terminal with the latest music hits. 🖥️🎧
 
+![Top Ten](images/top_ten.jpg)
+
 ## Features ✨
 - Scrapes real-time Billboard Top 100 data. 🌐
 - Displays the top 10 songs in a formatted MOTD. 📜
